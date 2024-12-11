@@ -1,0 +1,91 @@
+/* General Reset and Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('KKK.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5%;
+    min-height: 100vh;
+}
+
+/* Title Styling */
+.title {
+    font-size: 3rem; /* Adjusted font size */
+    margin: 2%;
+    text-align: center;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Calendar Grid Styling */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2%;
+    width: 90%;
+}
+
+/* Individual Days in the Calendar */
+.calendar-grid .day {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10%;
+    border-radius: 5%;
+    font-size: 3.5vw;
+    text-align: center;
+    position: relative;
+}
+
+/* Current Day Highlight */
+.calendar-grid .day.current {
+    background-color: red;
+    font-weight: bold;
+}
+
+/* Future Days in the Calendar */
+.calendar-grid .day.future {
+    opacity: 0.5;
+}
+
+/* Special positioning for the last three days of December */
+.calendar-grid .day.day-29,
+.calendar-grid .day.day-30,
+.calendar-grid .day.day-31 {
+    grid-row: 6;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Position last three days into the calendar grid */
+.calendar-grid .day.day-29 {
+    grid-column: 3 / 4;
+}
+
+.calendar-grid .day.day-30 {
+    grid-column: 4 / 5;
+}
+
+.calendar-grid .day.day-31 {
+    grid-column: 5 / 6;
+}
+
+/* Days Left to Christmas Box */
+.days-left-box {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    padding: 15px 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    margin: 50px 0; /* Lowering the box a few hundred pixels */
+}
+
+#daysLeft {
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
